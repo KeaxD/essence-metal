@@ -5,8 +5,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="home-container">
-        <div className="logo-container">
+      <div className="main-container">
+        <div className="essence-metal-logo-container">
           <Link to="/">
             <img src="/essence-metal-logo.svg" alt="Essence-Metal-Logo" />
           </Link>
