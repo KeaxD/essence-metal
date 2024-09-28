@@ -36,24 +36,33 @@
   font-style: oblique;
 }
 
+.work-text {
+  letter-spacing: 0.3rem;
+  align-self: center;
+  padding-top: 6rem;
+}
+
 .partner-section {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .slider {
   display: flex;
   background-color: #ffc5ac;
+  white-space: nowrap;
 }
 
 .partner-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  display: flex;
-  animation: slide 10s infinite linear;
+  display: inline-block;
+  animation: slide 32s linear infinite;
+}
+
+.slider:hover .partner-container {
+  animation-play-state: paused;
 }
 
 .logo {
@@ -66,6 +75,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-90%);
+    transform: translateX(-100%);
   }
 }
