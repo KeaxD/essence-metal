@@ -12,7 +12,7 @@ function Home() {
         </p>
       </div>
       <div className="partner-section">
-        <h2 className="work-text">We worked with</h2>
+        <h2 className="work-text">We had the pleasure to work with</h2>
         <div className="slider">
           <div className="partner-container">
             <img

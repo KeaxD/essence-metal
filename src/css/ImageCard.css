@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  width: 95vw;
+  min-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.option {
+  width: 90px;
+  height: 80vh;
+  background: var(--optionBackground);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: flex-grow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 3px;
+  opacity: 0.6;
+}
+
+.option.active {
+  flex-grow: 1;
+  filter: none;
+  opacity: 1;
+}
