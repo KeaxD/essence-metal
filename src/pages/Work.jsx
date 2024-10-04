@@ -1,27 +1,23 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import "../css/Work.css";
-import ImageOptions from "../components/ImageCard";
+import Retail from "./Retail";
+import ImageModal from "../components/ImageModal";
+import { useState } from "react";
 
 function Work() {
-  const uberImages = [
-    "/uber-hq/window2.jpg",
-    "/uber-hq/entrance.jpg",
-    "/uber-hq/lounge-cover.jpg",
-    "/uber-hq/lounge2-inside.jpg",
-    "/uber-hq/lounge2-inside2.jpg",
-    "/uber-hq/lounge2.jpg",
-    "/uber-hq/window1.jpg",
+  const [modal, setModal] = useState(false);
+
+  const images = [
+    "https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg",
+    "https://images.pexels.com/photos/126271/pexels-photo-126271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/547125/pexels-photo-547125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/161164/senso-ji-kyoto-japan-temple-161164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1068508/pexels-photo-1068508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   ];
 
-  const bmrImages = [
-    "/bmr/bar.jpg",
-    "/bmr/bar2.jpg",
-    "/bmr/display-counter.jpg",
-    "/bmr/kitchen-counter.jpg",
-    "/bmr/kitchen-counter2.jpg",
-    "/bmr/sofa.jpg",
-    "/bmr/staircase.jpg",
-  ];
+  const toggleModal = () => {
+    setModal(!modal);
+  };
 
   return (
     <>
@@ -30,7 +26,7 @@ function Work() {
           <h1>Our work span over different needs</h1>
           <ul className="work-categories-list">
             <li className="link">
-              <Link to="/retail">Retail Stores</Link>
+              <Link to="/work/retail">Retail Stores</Link>
             </li>
             <li className="link">
               <Link to="/hospitality">Hospitality</Link>
@@ -42,21 +38,18 @@ function Work() {
               <Link to="/residential">Residential</Link>
             </li>
           </ul>
-          <div>
-            <div className="projects">
-              <h2>Uber Headquarter, Sunnyvale CA</h2>
-              <ImageOptions imageArr={uberImages} />
-            </div>
-            <div className="projects">
-              <h2>BMR Amenity Room San Francisco South, CA</h2>
-              <ImageOptions imageArr={bmrImages} />
-            </div>
-          </div>
         </div>
       </div>
-
+      <div onClick={toggleModal} className="images-carousel">
+        <img
+          className="image"
+          src="/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg"
+          alt=""
+        />
+      </div>
+      {modal && <ImageModal images={images} onClose={toggleModal} />}
       <Routes>
-        <Route path="/retail" />
+        <Route path="work/retail" element={<Retail />} />
       </Routes>
     </>
   );
