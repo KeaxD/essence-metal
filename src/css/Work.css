@@ -11,6 +11,93 @@
   margin-top: 3rem;
 }
 
-.image {
-  max-height: 70vh;
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+}
+
+.cover-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.project-location-name {
+  margin: 4rem;
+}
+
+.cover-image:hover {
+  cursor: pointer;
+}
+
+.cover-container::after {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgb(253, 169, 132),
+    rgb(147, 147, 147),
+    rgb(253, 169, 132)
+  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 3rem;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.cover-img-container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  background-color: #242424;
+  border-radius: 5px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.cover-img-container::after,
+.cover-img-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border-radius: 5px;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 60%,
+    rgb(253, 169, 132)
+  );
+  z-index: -1;
+  animation: spin 20s linear infinite;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.cover-img-container::before {
+  filter: blur(3px);
+}
+
+.cover-img-container:hover::after,
+.cover-img-container:hover::before {
+  opacity: 1;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

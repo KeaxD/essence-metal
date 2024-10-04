@@ -3,18 +3,16 @@ import "../css/Work.css";
 import Retail from "./Retail";
 import ImageModal from "../components/ImageModal";
 import { useState } from "react";
-import { faenaImages, uberImages } from "../constants/ImageConstants";
+import {
+  bmrImages,
+  faenaImages,
+  mandarinSpaImages,
+  metropolisImages,
+  uberImages,
+} from "../constants/ImageConstants";
 
 function Work() {
   const [modalInfo, setModalInfo] = useState({ isOpen: false, images: [] });
-
-  const images = [
-    "https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg",
-    "https://images.pexels.com/photos/126271/pexels-photo-126271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/547125/pexels-photo-547125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/161164/senso-ji-kyoto-japan-temple-161164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/1068508/pexels-photo-1068508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  ];
 
   const toggleModal = (images = []) => {
     setModalInfo({ isOpen: !modalInfo.isOpen, images });
@@ -41,19 +39,71 @@ function Work() {
           </ul>
         </div>
       </div>
-      <div onClick={() => toggleModal(faenaImages)} className="images-carousel">
-        <img
-          className="image"
-          src="/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg"
-          alt=""
-        />
+      <div onClick={() => toggleModal(faenaImages)} className="cover-container">
+        <h2 className="project-location-name">
+          Feana Hotel, Miami Beach Florida
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg"
+            alt="Faena Hotel Saxony Bar"
+          />
+        </div>
       </div>
-      <div onClick={() => toggleModal(uberImages)} className="images-carousel">
-        <img className="image" src="/uber-hq/entrance.jpg" alt="" />
+      <div onClick={() => toggleModal(uberImages)} className="cover-container">
+        <h2 className="project-location-name">
+          Uber Headquarter, Sunnyvale CA
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/uber-hq/entrance.jpg"
+            alt="Uber headquarters entrance"
+          />
+        </div>
       </div>
+      <div onClick={() => toggleModal(bmrImages)} className="cover-container">
+        <h2 className="project-location-name">
+          BMR Amenity Room San Francisco South, CA
+        </h2>
+        <div className="cover-img-container">
+          <img className="cover-image" src="/bmr/bar.jpg" alt="BMR bar" />
+        </div>
+      </div>
+      <div
+        onClick={() => toggleModal(mandarinSpaImages)}
+        className="cover-container"
+      >
+        <h2 className="project-location-name">
+          Mandarin Spa Vitality Pool, Las Vegas
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/mandarin-spa/pool-entrance.jpg"
+            alt="Mandarin Spa Pool"
+          />
+        </div>
+      </div>
+      <div
+        onClick={() => toggleModal(metropolisImages)}
+        className="cover-container"
+      >
+        <h2 className="project-location-name">Metropolis, Los Angles CA</h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/metropolis/wall4.jpg"
+            alt="Metropolis wall"
+          />
+        </div>
+      </div>
+
       {modalInfo.isOpen && (
         <ImageModal images={modalInfo.images} onClose={() => toggleModal([])} />
       )}
+
       <Routes>
         <Route path="work/retail" element={<Retail />} />
       </Routes>
