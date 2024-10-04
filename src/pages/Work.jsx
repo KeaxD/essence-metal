@@ -21,8 +21,8 @@ function Work() {
   return (
     <>
       <div className="work-container">
-        <div>
-          <h1>Our work span over different needs</h1>
+        <div className="work-categories-container">
+          <h1 className="work-intro">Our work span over different needs</h1>
           <ul className="work-categories-list">
             <li className="link">
               <Link to="/work/retail">Retail Stores</Link>
@@ -37,6 +37,9 @@ function Work() {
               <Link to="/residential">Residential</Link>
             </li>
           </ul>
+        </div>
+        <div>
+          <h1></h1>
         </div>
       </div>
       <div onClick={() => toggleModal(faenaImages)} className="cover-container">
