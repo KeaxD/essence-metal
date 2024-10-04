@@ -3,9 +3,10 @@ import "../css/Work.css";
 import Retail from "./Retail";
 import ImageModal from "../components/ImageModal";
 import { useState } from "react";
+import { faenaImages, uberImages } from "../constants/ImageConstants";
 
 function Work() {
-  const [modal, setModal] = useState(false);
+  const [modalInfo, setModalInfo] = useState({ isOpen: false, images: [] });
 
   const images = [
     "https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg",
@@ -15,8 +16,8 @@ function Work() {
     "https://images.pexels.com/photos/1068508/pexels-photo-1068508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   ];
 
-  const toggleModal = () => {
-    setModal(!modal);
+  const toggleModal = (images = []) => {
+    setModalInfo({ isOpen: !modalInfo.isOpen, images });
   };
 
   return (
@@ -40,14 +41,19 @@ function Work() {
           </ul>
         </div>
       </div>
-      <div onClick={toggleModal} className="images-carousel">
+      <div onClick={() => toggleModal(faenaImages)} className="images-carousel">
         <img
           className="image"
           src="/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg"
           alt=""
         />
       </div>
-      {modal && <ImageModal images={images} onClose={toggleModal} />}
+      <div onClick={() => toggleModal(uberImages)} className="images-carousel">
+        <img className="image" src="/uber-hq/entrance.jpg" alt="" />
+      </div>
+      {modalInfo.isOpen && (
+        <ImageModal images={modalInfo.images} onClose={() => toggleModal([])} />
+      )}
       <Routes>
         <Route path="work/retail" element={<Retail />} />
       </Routes>

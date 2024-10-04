@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../css/Modal.css";
 
 export default function ImageModal({ images, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
