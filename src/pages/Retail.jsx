@@ -1,37 +1,86 @@
-import ImageOptions from "../components/ImageCard";
+import { useState } from "react";
 import {
-  uberImages,
   bmrImages,
+  faenaImages,
   mandarinSpaImages,
   metropolisImages,
-  willshireImages,
+  uberImages,
 } from "../constants/ImageConstants";
+import "../css/Retail.css";
+import ImageModal from "../components/ImageModal";
 
-function Retail() {
+export default function Retail() {
+  const [modalInfo, setModalInfo] = useState({ isOpen: false, images: [] });
+
+  const toggleModal = (images = []) => {
+    setModalInfo({ isOpen: !modalInfo.isOpen, images });
+  };
   return (
-    <div>
-      <div className="projects">
-        <h2>Uber Headquarter, Sunnyvale CA</h2>
-        <ImageOptions imageArr={uberImages} />
+    <>
+      <div onClick={() => toggleModal(faenaImages)} className="cover-container">
+        <h2 className="project-location-name">
+          Feana Hotel, Miami Beach Florida
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg"
+            alt="Faena Hotel Saxony Bar"
+          />
+        </div>
       </div>
-      <div className="projects">
-        <h2>BMR Amenity Room San Francisco South, CA</h2>
-        <ImageOptions imageArr={bmrImages} />
+      <div onClick={() => toggleModal(uberImages)} className="cover-container">
+        <h2 className="project-location-name">
+          Uber Headquarter, Sunnyvale CA
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/uber-hq/entrance.jpg"
+            alt="Uber headquarters entrance"
+          />
+        </div>
       </div>
-      <div className="projects">
-        <h2>Wilshire Grand 71st Floor, Los Angles CA</h2>
-        <ImageOptions imageArr={mandarinSpaImages} />
+      <div onClick={() => toggleModal(bmrImages)} className="cover-container">
+        <h2 className="project-location-name">
+          BMR Amenity Room San Francisco South, CA
+        </h2>
+        <div className="cover-img-container">
+          <img className="cover-image" src="/bmr/bar.jpg" alt="BMR bar" />
+        </div>
       </div>
-      <div className="projects">
-        <h2>Mandarin Spa Vitality Pool, Las Vegas</h2>
-        <ImageOptions imageArr={metropolisImages} />
+      <div
+        onClick={() => toggleModal(mandarinSpaImages)}
+        className="cover-container"
+      >
+        <h2 className="project-location-name">
+          Mandarin Spa Vitality Pool, Las Vegas
+        </h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/mandarin-spa/pool-entrance.jpg"
+            alt="Mandarin Spa Pool"
+          />
+        </div>
       </div>
-      <div className="projects">
-        <h2>Metropolis, Los Angles CA</h2>
-        <ImageOptions imageArr={willshireImages} />
+      <div
+        onClick={() => toggleModal(metropolisImages)}
+        className="cover-container"
+      >
+        <h2 className="project-location-name">Metropolis, Los Angles CA</h2>
+        <div className="cover-img-container">
+          <img
+            className="cover-image"
+            src="/metropolis/wall4.jpg"
+            alt="Metropolis wall"
+          />
+        </div>
       </div>
-    </div>
+
+      {modalInfo.isOpen && (
+        <ImageModal images={modalInfo.images} onClose={() => toggleModal([])} />
+      )}
+    </>
   );
 }
-
-export default Retail;
