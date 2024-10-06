@@ -1,4 +1,4 @@
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, Outlet } from "react-router-dom";
 import "../css/Work.css";
 import Retail from "./Retail";
 
@@ -15,7 +15,7 @@ function Work() {
               <Link to="/work/Retail">Retail Stores</Link>
             </li>
             <li className="link">
-              <Link to="/Hospitality">Hospitality</Link>
+              <Link to="/work/Hospitality">Hospitality</Link>
             </li>
             <li className="link">
               <Link to="/Casinos">Casinos</Link>
@@ -29,11 +29,7 @@ function Work() {
           <h1 className="title-text">{path}</h1>
         </div>
       </div>
-
-      <Retail />
-      <Routes>
-        <Route path="work/Retail" element={<Retail />} />
-      </Routes>
+      <Outlet />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
+import Retail from "./pages/Retail";
 import "./App.css";
 
 function App() {
@@ -34,7 +35,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Work/*" element={<Work />} />
+        <Route path="/Work" element={<Work />}>
+          <Route path="Retail" element={<Retail />} />
+          <Route path="Hospitality" />
+        </Route>
         <Route path="/About" element={<Home />} /> {/*Still need to be built */}
         <Route path="/*" element={<Home />} /> {/*Nothing Found page */}
       </Routes>
