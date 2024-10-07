@@ -30,7 +30,6 @@ export const metropolisImages = [
   "/metropolis/ceiling.jpg",
   "/metropolis/desk-counter.jpg",
   "/metropolis/wall.jpg",
-  "/metropolis/wall1.jpg",
   "/metropolis/wall2.jpg",
   "/metropolis/wall3.jpg",
   "/metropolis/wall4.jpg",

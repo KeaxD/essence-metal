@@ -18,12 +18,13 @@ export default function ImageModal({ images, onClose }) {
     document.body.style.overflow = "hidden";
 
     const handleKeyDown = (event) => {
-      if (modal) {
-        if (event.key === "ArrowRight") {
-          nextImage();
-        } else if (event.key === "ArrowLeft") {
-          prevImage();
-        }
+      if (event.key === "ArrowRight") {
+        nextImage();
+      } else if (event.key === "ArrowLeft") {
+        prevImage();
+      } else if (event.key === "Escape" || event.key === "Esc") {
+        console.log("Pressed Escape");
+        onClose();
       }
     };
 
