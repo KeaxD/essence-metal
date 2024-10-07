@@ -1,9 +1,11 @@
-import { Link, Routes, Route, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "../css/Work.css";
-import Retail from "./Retail";
+import { useEffect } from "react";
 
 function Work() {
-  let path = location.pathname.split("/")[2] || "work";
+  let path = useLocation();
+  let segment = path.pathname.split("/");
+  const bannerTitle = segment[segment.length - 1];
 
   return (
     <>
@@ -26,7 +28,7 @@ function Work() {
           </ul>
         </div>
         <div className="category-title-container">
-          <h1 className="title-text">{path}</h1>
+          <h1 className="title-text">{bannerTitle}</h1>
         </div>
       </div>
       <Outlet />
