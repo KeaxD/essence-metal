@@ -4,12 +4,12 @@ function Home() {
   return (
     <div className="home-container">
       <div className="landing-banner">
-        <p className="text-banner">
-          Unlock your creativity with our custom fixtures and hardware. We
-          specialize in fire arts, antique reproductions, and unique sculptures,
-          all crafted in-house with exquisite metal finishes. Discover the
-          perfect blend of artistry and craftsmanship—tailored just for you!
-        </p>
+        <div className="banner-content">
+          <p className="text-banner">Unlock your creativity</p>
+          <a href="mailto:keanuph@gmail.com" className="btn-banner">
+            Start a Project
+          </a>
+        </div>
       </div>
       <div className="partner-section">
         <h2 className="work-text">We had the pleasure to work with</h2>

@@ -37,7 +37,6 @@ function App() {
           </nav>
         </div>
       </div>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Work" element={<Work />}>
@@ -46,10 +45,11 @@ function App() {
           <Route path="Casinos" element={<Casinos />} />
           <Route path="Residential" element={<Residential />} />
         </Route>
-        <Route path="Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/*" element={<Home />} /> {/*Nothing Found page */}
       </Routes>
+
+      <Contact />
     </>
   );
 }
