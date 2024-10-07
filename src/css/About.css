@@ -1,0 +1,10 @@
+.location-map {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.about-text-container {
+  width: 50%;
+  margin: 5rem;
+}

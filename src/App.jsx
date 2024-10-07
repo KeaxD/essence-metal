@@ -6,6 +6,7 @@ import "./App.css";
 import Hospitality from "./pages/Hospitality";
 import Casinos from "./pages/Casinos";
 import Residential from "./pages/Residential";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
                 <Link to="/Work/Retail">Our Work</Link>
               </li>
               <li className="link">
-                <Link>About</Link>
+                <Link to="/About">About</Link>
               </li>
               <li className="link">
                 <Link>Contact</Link>
@@ -44,7 +45,7 @@ function App() {
           <Route path="Casinos" element={<Casinos />} />
           <Route path="Residential" element={<Residential />} />
         </Route>
-        <Route path="/About" element={<Home />} /> {/*Still need to be built */}
+        <Route path="/About" element={<About />} />
         <Route path="/*" element={<Home />} /> {/*Nothing Found page */}
       </Routes>
     </>
