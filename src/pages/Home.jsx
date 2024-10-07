@@ -6,6 +6,10 @@ function Home() {
       <div className="landing-banner">
         <div className="banner-content">
           <p className="text-banner">Unlock your creativity</p>
+          <p>
+            Custom fixtures, fire arts, antique reproductions, and unique
+            sculptures, all crafted with exquisite metal finishes.
+          </p>
           <a href="mailto:keanuph@gmail.com" className="btn-banner">
             Start a Project
           </a>
