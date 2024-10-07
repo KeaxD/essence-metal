@@ -59,3 +59,94 @@ export const placeHolderImages = [
   "https://images.pexels.com/photos/161164/senso-ji-kyoto-japan-temple-161164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   "https://images.pexels.com/photos/1068508/pexels-photo-1068508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 ];
+
+export const lvImages = [
+  "/louis-vuitton/outside-display.jpg",
+  "/louis-vuitton/shelf.jpg",
+  "/louis-vuitton/shelf2.jpg",
+  "/louis-vuitton/shelf3.jpg",
+  "/louis-vuitton/shelf4.jpg",
+];
+
+export const pradaImages = [
+  "/prada/shelf.jpg",
+  "/prada/shelf2.jpg",
+  "/prada/stairs.jpg",
+  "/prada/wall-shelf.jpg",
+  "/prada/wall-shelf2.jpg",
+];
+
+export const willSonomaImages = [
+  "/will-sonoma/outside-cover.jpg",
+  "/will-sonoma/outside-cover2.jpg",
+  "/will-sonoma/outside-railings.jpg",
+  "/will-sonoma/outside-railings2.jpg",
+];
+
+export const yurmanImages = [
+  "/yurman/cover-side.jpg",
+  "/yurman/cover-side2.jpg",
+  "/yurman/cover-top.jpg",
+  "/yurman/cover-top2.jpg",
+  "/yurman/entrance.jpg",
+  "/yurman/entrance2.jpg",
+  "/yurman/floor.jpg",
+];
+
+export const cityCenterImages = [
+  "/city-center/door-handles.jpg",
+  "/city-center/holed-wall.jpg",
+  "/city-center/stairs.jpg",
+  "/city-center/wall.jpg",
+];
+
+export const luxorImages = [
+  "/luxor/arches.jpg",
+  "/luxor/cups.jpg",
+  "/luxor/logo.jpg",
+  "/luxor/logo2.jpg",
+];
+
+export const mgmImages = [
+  "/mgm/column.jpg",
+  "/mgm/curvy-bars.jpg",
+  "/mgm/railings.jpg",
+  "/mgm/railings2.jpg",
+];
+
+export const valleyViewImages = [
+  "/valley-view/railings.jpg",
+  "/valley-view/railings2.jpg",
+  "/valley-view/railings3.jpg",
+  "/valley-view/seaparator.jpg",
+  "/valley-view/tables.jpg",
+];
+
+export const pointLomaImages = [
+  "/point-loma/outside.jpg",
+  "/point-loma/post.jpg",
+  "/point-loma/railings.jpg",
+  "/point-loma/railings2.jpg",
+  "/point-loma/railings3.jpg",
+];
+
+export const cabrilloImages = [
+  "/cabrillo/finished.jpg",
+  "/cabrillo/finished2.jpg",
+  "/cabrillo/finished3.jpg",
+  "/cabrillo/floater.jpg",
+  "/cabrillo/general-view.jpg",
+  "/cabrillo/welding.jpg",
+];
+
+export const newportImages = [
+  "/newport/picture.jpg",
+  "/newport/railings.jpg",
+  "/newport/railings2.jpg",
+];
+
+export const mgmWineImages = [
+  "/mgm-wine/wine-rack.jpg",
+  "/mgm-wine/wine-rack2.jpg",
+  "/mgm-wine/wine-rack3.jpg",
+];

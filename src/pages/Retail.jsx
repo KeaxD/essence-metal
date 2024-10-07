@@ -1,61 +1,51 @@
 import {
-  bmrImages,
-  faenaImages,
-  mandarinSpaImages,
-  metropolisImages,
-  uberImages,
+  pradaImages,
+  yurmanImages,
+  willSonomaImages,
+  lvImages,
 } from "../constants/ImageConstants";
 import "../css/Retail.css";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Retail() {
-  const faenaCoverImg = {
-    src: "/faena-hotel/Saxony-Bar-RS2-1920x1470.jpg",
-    alt: "Faena Hotel Saxony Bar",
+  const pradaCoverImg = {
+    src: "/prada/wall-shelf2.jpg",
+    alt: "Prada store wall-shelf",
   };
-  const uberCoverImg = {
-    src: "/uber-hq/entrance.jpg",
-    alt: "Uber headquarters entrance",
+  const yurmanCoverImg = {
+    src: "/yurman/entrance.jpg",
+    alt: "Yurman store entrance",
   };
-  const bmrCoverImg = {
-    src: "/bmr/bar.jpg",
-    alt: "BMR bar",
+  const willSonomaCoverImg = {
+    src: "/will-sonoma/outside-cover.jpg",
+    alt: "Williams Sonoma entrance",
   };
-  const mandarinCoverImg = {
-    src: "/mandarin-spa/pool-entrance.jpg",
-    alt: "Mandarin Spa Pool",
-  };
-  const metropolisCoverImg = {
-    src: "/metropolis/wall4.jpg",
-    alt: "Metropolis wall",
+  const louisVuittonCoverImg = {
+    src: "/louis-vuitton/shelf2.jpg",
+    alt: "Louis Vuitton store entrance",
   };
 
   return (
     <>
       <ProjectCard
-        images={faenaImages}
-        projectName="Feana Hotel, Miami Beach Florida"
-        coverImg={faenaCoverImg}
+        images={pradaImages}
+        projectName="Prada, Rodeo Drive, Beverly Hills"
+        coverImg={pradaCoverImg}
       />
       <ProjectCard
-        images={uberImages}
-        projectName="Uber Headquarter, Sunnyvale CA"
-        coverImg={uberCoverImg}
+        images={lvImages}
+        projectName="Louis Vuitton, Rodeo Beverly Hills"
+        coverImg={louisVuittonCoverImg}
       />
       <ProjectCard
-        images={bmrImages}
-        projectName="BMR Amenity Room San Francisco South, CA"
-        coverImg={bmrCoverImg}
+        images={yurmanImages}
+        projectName="David Yurman, Washington DC"
+        coverImg={yurmanCoverImg}
       />
       <ProjectCard
-        images={mandarinSpaImages}
-        projectName="Mandarin Spa Vitality Pool, Las Vegas"
-        coverImg={mandarinCoverImg}
-      />
-      <ProjectCard
-        images={metropolisImages}
-        projectName="Metropolis, Los Angles CA"
-        coverImg={metropolisCoverImg}
+        images={willSonomaImages}
+        projectName="Williams Sonoma, South Coast Plaza CA"
+        coverImg={willSonomaCoverImg}
       />
     </>
   );

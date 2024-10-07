@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Retail from "./pages/Retail";
 import "./App.css";
+import Hospitality from "./pages/Hospitality";
+import Casinos from "./pages/Casinos";
+import Residential from "./pages/Residential";
 
 function App() {
   return (
@@ -37,7 +40,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Work" element={<Work />}>
           <Route path="Retail" element={<Retail />} />
-          <Route path="Hospitality" />
+          <Route path="Hospitality" element={<Hospitality />} />
+          <Route path="Casinos" element={<Casinos />} />
+          <Route path="Residential" element={<Residential />} />
         </Route>
         <Route path="/About" element={<Home />} /> {/*Still need to be built */}
         <Route path="/*" element={<Home />} /> {/*Nothing Found page */}

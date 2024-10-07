@@ -14,16 +14,16 @@ function Work() {
           <h1 className="work-intro">Our work span over different needs</h1>
           <ul className="work-categories-list">
             <li className="link">
-              <Link to="/work/Retail">Retail Stores</Link>
+              <Link to="/Work/Retail">Retail Stores</Link>
             </li>
             <li className="link">
-              <Link to="/work/Hospitality">Hospitality</Link>
+              <Link to="/Work/Hospitality">Hospitality</Link>
             </li>
             <li className="link">
-              <Link to="/Casinos">Casinos</Link>
+              <Link to="/Work/Casinos">Casinos</Link>
             </li>
             <li className="link">
-              <Link to="/Residential">Residential</Link>
+              <Link to="/Work/Residential">Residential</Link>
             </li>
           </ul>
         </div>
