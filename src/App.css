@@ -1,4 +1,4 @@
-.main-container {
+.primary-main-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -17,5 +17,83 @@
 
 .link {
   list-style-type: none;
-  margin: 1rem;
+  background: fixed;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.link:hover {
+  background: linear-gradient(to right, #6b6b6b, #3d1a1ad8);
+}
+
+.em-logo {
+  width: clamp(200px, 30vw, 35rem);
+}
+
+.nav-container {
+  width: clamp(20%, 40vw, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu {
+  width: 100%;
+}
+
+@media screen and (max-width: 590px) {
+  .primary-main-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 590px) {
+  .mobile-main-container {
+    display: none;
+  }
+
+  .em-mobile-logo {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+.mobile-main-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.em-mobile-logo {
+  width: clamp(140px, 20vw, 18rem);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.close {
+  display: none;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  top: 0%;
+  margin: 0 50vw;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.mobile-menu-icon {
+  position: absolute;
+  right: 0%;
+  margin: 2rem;
 }
