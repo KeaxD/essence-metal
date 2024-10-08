@@ -37,7 +37,7 @@
 
 .cover-img-container {
   position: relative;
-  width: clamp(300px, 80%, 800px);
+  width: clamp(250px, 60%, 600px);
   max-height: 1200px;
   background-color: #242424;
   border-radius: 5px;

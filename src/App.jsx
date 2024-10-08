@@ -78,19 +78,20 @@ function App() {
                 width="43px"
                 fill="#e8eaed"
                 onClick={handleToggle}
+                className="mobile-close-icon"
               >
                 <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
               </svg>
               <Link to="/">
-                <li className="link">Home</li>
+                <li className="mobile-link">Home</li>
               </Link>
 
               <Link to="/Work/Retail">
-                <li className="link">Our Work</li>
+                <li className="mobile-link">Our Work</li>
               </Link>
 
               <Link to="/About">
-                <li className="link">About</li>
+                <li className="mobile-link">About</li>
               </Link>
             </ul>
           </nav>

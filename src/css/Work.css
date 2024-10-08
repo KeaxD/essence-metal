@@ -8,6 +8,7 @@
 
 .work-intro {
   padding: 1rem;
+  font-size: clamp(20px, 3.4vw, 70px);
 }
 
 .work-categories-container::after {

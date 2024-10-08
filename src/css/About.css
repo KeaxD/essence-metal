@@ -1,11 +1,29 @@
+.main-about-container {
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
 .location-map {
   width: 100%;
   position: absolute;
   z-index: -1;
   object-fit: cover;
+  min-width: 900px;
+  top: 0;
 }
 
 .about-text-container {
-  width: 40%;
+  width: clamp(230px, 40vw, 500px);
   margin: 5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

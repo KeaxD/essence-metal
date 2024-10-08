@@ -2,6 +2,20 @@
   display: flex;
 }
 
+.contact-main-container h1,
+.contact-main-container h3 {
+  text-wrap: wrap;
+}
+
+.contact-main-container h1 {
+  font-size: clamp(30px, 5vw, 80px);
+}
+
+.contact-main-container h3 {
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 130%;
+}
+
 .contact-text-card,
 .contact-links-card {
   width: 50%;
@@ -24,11 +38,12 @@
   width: clamp(100px, 110px, 50%);
   margin: 1rem;
   color: black;
+  transition: all ease-in-out 0.2s;
 }
 
 .email-btn:hover {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.719);
+  color: white;
+  background-color: #242424;
 }
 
 .contact-title {
@@ -40,6 +55,8 @@
   );
   background-clip: text;
   color: transparent;
+  padding: 2rem;
+  margin: 0;
 }
 
 @media screen and (max-width: 775px) {

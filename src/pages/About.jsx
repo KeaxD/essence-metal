@@ -6,26 +6,21 @@ export default function About() {
         <img src="/location-map.png" alt="map" className="location-map" />
         <div className="about-text-container">
           <p>
-            Since 1986 our women owned and family operated facility has dazzled
-            the high end hospitality, retail and residential world with true old
-            world craftsmanship and attention to detail. We have had the honor
-            of working on projects such as the Cesar’s Palace, Trump Taj Mahal,
-            Wynn Casino, M Casino, City Center, Grand Wailea, Disney, Feana
-            Miami, Grand Wilshire, Uber etc in the hospitality arena. We also
-            have worked on Prada: Rodeo Drive, Louis Vuitton: Rodeo Drive, YSL,
-            Tiffany’s, Harry Winston, Christofle: Rodeo Drive, etc in the retail
-            arena and many custom homes throughout the US.
+            Since 1986, our women-owned, family-operated facility has provided
+            top-tier craftsmanship to the high-end hospitality, retail, and
+            residential sectors. Our notable projects include Caesar’s Palace,
+            Trump Taj Mahal, Wynn Casino, City Center, Grand Wailea, Disney,
+            Faena Miami, Grand Wilshire, Uber, and prominent retail spaces like
+            Prada, Louis Vuitton, Tiffany’s, and Harry Winston.
           </p>
           <br />
           <p>
-            At Essence Metals LLC we pride ourselves on delivering exceptional
-            work at a competitive price in a timely manner. We are capable to
-            produce custom fixtures and hardware, fire arts, antique
-            reproduction, sculptures and various metal finished done in house.
-            Geographically we have worked on projects from Hawaii to New Jersey
-            with most of our work being done in S. California and Nevada. We
-            maintain a small and efficient shop and look forward to helping you
-            with your next architectural metal need.
+            At Essence Metals LLC, we deliver exceptional custom fixtures,
+            hardware, fire arts, antique reproductions, sculptures, and various
+            in-house metal finishes. Serving projects from Hawaii to New Jersey,
+            with a focus on Southern California and Nevada, we pride ourselves
+            on quality, competitive pricing, and timely delivery. Let us assist
+            with your next architectural metal project.
           </p>
         </div>
       </div>
