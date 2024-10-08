@@ -67,7 +67,7 @@ export default function ImageModal({ images, onClose }) {
                 src="/icons8-close.png"
                 alt="close-arrow"
                 onClick={onClose}
-                className="carousel-btns close"
+                className="carousel-btns close-btn"
               />
             </div>
           ))}
