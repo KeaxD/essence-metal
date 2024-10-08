@@ -32,15 +32,17 @@ function App() {
         <div className="nav-container">
           <nav className="nav-menu">
             <ul className="links">
-              <li className="link">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="link">
-                <Link to="/Work/Retail">Our Work</Link>
-              </li>
-              <li className="link">
-                <Link to="/About">About</Link>
-              </li>
+              <Link to="/" className="link">
+                <li>Home</li>
+              </Link>
+
+              <Link to="/Work/Retail" className="link">
+                <li>Our Work</li>
+              </Link>
+
+              <Link to="/About" className="link">
+                <li>About</li>
+              </Link>
             </ul>
           </nav>
         </div>

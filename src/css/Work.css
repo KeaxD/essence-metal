@@ -59,3 +59,8 @@
   align-self: center;
   letter-spacing: 0.2rem;
 }
+
+.work-category-link {
+  list-style-type: none;
+  padding: 0.5rem 2vw;
+}

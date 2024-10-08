@@ -13,18 +13,21 @@ function Work() {
         <div className="work-categories-container">
           <h1 className="work-intro">Our work span over different needs</h1>
           <ul className="work-categories-list">
-            <li className="link">
-              <Link to="/Work/Retail">Retail Stores</Link>
-            </li>
-            <li className="link">
-              <Link to="/Work/Hospitality">Hospitality</Link>
-            </li>
-            <li className="link">
-              <Link to="/Work/Casinos">Casinos</Link>
-            </li>
-            <li className="link">
-              <Link to="/Work/Residential">Residential</Link>
-            </li>
+            <Link to="/Work/Retail">
+              <li className="work-category-link">Retail Stores</li>
+            </Link>
+
+            <Link to="/Work/Hospitality">
+              <li className="work-category-link">Hospitality</li>
+            </Link>
+
+            <Link to="/Work/Casinos">
+              <li className="work-category-link">Casinos</li>
+            </Link>
+
+            <Link to="/Work/Residential">
+              <li className="work-category-link">Residential</li>
+            </Link>
           </ul>
         </div>
         <div className="category-title-container">
